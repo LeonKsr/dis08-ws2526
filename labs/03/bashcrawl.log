@@ -1,0 +1,462 @@
+Leon@DESKTOP-UI8N047 MINGW64 ~
+$ cd /c/Users/Leon/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09
+$ ls -a
+./  ../  .binder/  LICENSE  README.md  entrance/
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09
+$ cd entrance
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance
+$ ls -a
+./  ../  .chapel/  .rift/  .scrap  .vault/  cellar/  scroll
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance
+$ cat scroll
+
+It is pitch black in these catacombs.
+You have a magickal spell that lists all items in a room.
+
+To see in the dark, type:     ls
+To move around, type:         cd <directory>
+
+Try looking around this room.
+Then move into one of the next rooms.
+
+EXAMPLE:
+
+$ ls
+$ cd cellar
+
+Remember to cast ``ls`` when you get into the next room!
+
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance
+$ cd cellar
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/cellar
+$ ls -a
+./  ../  armoury/  scroll  treasure*
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/cellar
+$ cat scroll
+
+# Illusions are strong here.
+# It is difficult to tell what is a doorway and what is an object.
+#
+# The magic spell you use to look can be augmented.
+#
+# From now on, cast your spell like this:
+#
+# ls -F
+#
+# Directories (the rooms of these catacombs) end with a / symbol.
+#
+# Encounters (programs) end with a * symbol.
+#
+# You can avoid having to type `ls -F` every time by running the
+# following:
+#
+# alias ls='ls -F'
+#
+# This is known as a shell or command alias.  With this alias,
+# typing simply ls by itself will run ls -F. Try it out!
+#
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/cellar
+$ ls -F
+armoury/  scroll  treasure*
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/cellar
+$ cd armoury
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/cellar/armoury
+$ ls -F
+chamber/  potion*  scroll  treasure*
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/cellar/armoury
+$ cat scroll
+
+# You can interact with items in the room (they end with a *)
+# by running them as a command (a shell script).
+#
+# For example, to collect treasure:
+#
+# ./treasure
+#
+# The . (dot) means *don't move*, and the name of the
+# script makes the code run.  This is known as a
+# relative path, and the . means the current room
+# (directory).
+#
+# You may have left treasure in the previous room.
+# Go back to a previous directory with two dots,
+# which means *take a step back*.
+#
+# EXAMPLE:
+#
+# cd ..
+
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/cellar/armoury
+$ ./potion
+You have found a potion bottle of swirling
+green liquid. Do you want to drink it?  y/n
+
+y
+The taste of a rustic green plant fills your mouth.  It
+warms and strengthens you.
+
+Create a variable for your health points (HP).  You have
+15HP:
+
+export HP=15
+
+You can check your health at any time:
+
+echo $HP
+
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/cellar/armoury
+$ ./treasure
+You have found a gleaming silver **sword**!  You marvel at
+its craftsmanship, and you recall tales from your childhood
+of the great mystic king Rannismir who bore such a sword to
+protect the kingdom from the undead.
+
+Add this item to your inventory:
+
+export I=sword,$I
+
+Remember, you can check your inventory:
+
+echo $I
+
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/cellar/armoury
+$ cd ..
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/cellar
+$ cd ..
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance
+$ cd chapel
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/chapel
+$ ls -F
+altar*  courtyard/  scroll
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/chapel
+$ ./altar
+In the corner is a decaying old altar of some forgotten god.
+There is a small trinket on the ground.  It looks religious
+in nature.
+
+Do you want to put the trinket back on the altar? y/n
+y
+You place the trinket upon the altar.  You feel a gentle
+breeze pass through the room.
+
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/chapel
+$ ls -F
+altar*  courtyard/  scroll
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/chapel
+$ cd courtyard
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/chapel/courtyard
+$ ls -F
+aviary/  fountain*  rags*  scroll
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/chapel/courtyard
+$ ./fountain
+Do you want to approach the fountain? y/n  y
+The waters sparkle in the light of your gaze.  You feel
+drawn to it.
+
+But you suddenly feel strength to turn away.  You hear a
+sigh from the altar in the chapel.
+
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/chapel/courtyard
+$ cd ..
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/chapel
+$ ./altar
+In the corner is a decaying old altar of some forgotten god.
+Do you want to take the trinket for yourself? y/n
+y
+Remember to add the trinket to your inventory!
+
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/chapel
+$ echo $I
+
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/chapel
+$ cd courtyard
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/chapel/courtyard
+$ ls -F
+aviary/  fountain*  rags*  scroll
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/chapel/courtyard
+$ ./rags
+There's a pile of old **rags**.  They are old and worn with
+age, and probably fell off of some poor adventurer.
+
+Do you want to take the rags? y/n  y
+As you take the rags from the floor, you find a salted fish,
+probably from the rations of the former owner of these rags.
+Prefix these items to your inventory:
+
+export I=rags,fish,$I
+
+Remember, you can check your inventory
+
+echo $I
+
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/chapel/courtyard
+$ cd ..
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/chapel
+$ cd courtyard
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/chapel/courtyard
+$ cat scroll
+
+There is a great fountain in the center of this courtyard.
+The waters are bright and clear in the magickal light
+emanating from your eyes.
+
+There were once plants growing here, but they are all
+dead and gnarled now.
+
+If you stand still here, you can hear the soft rippling
+of water, and even the occasional splash.
+
+Perhaps there are fish that yet live in the fountain?
+
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/chapel/courtyard
+$ cd ..
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/chapel
+$ cd ..
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance
+$ cd vault
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/vault
+$ ls -F
+glass*  scroll  stronghold/
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/vault
+$ cat scroll
+
+# You have entered an asymmetric room with shards of glass
+# arranged along the floor in haphazard patterns.
+#
+# As you move past them, they each appear to turn slightly,
+# as if watching you go.
+#
+# On the wall is a picture of two goblets:
+# one glows brightly,
+# the other shines darkly
+
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/vault
+$ ./glass
+Do you have an ice crystal? y/n  y
+You search in your inventory but find nothing that seems like
+a crystal
+
+You sense that the glass shards are searching for something.
+Whatever it is, you cannot provide it now.
+
+Walk with care.
+
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/vault
+$ cd stronghold
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/vault/stronghold
+$ ls -F
+goblet*  nursery/  orb1  scroll
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/vault/stronghold
+$ cat scroll
+
+# There is a fine gold goblet at the center of a
+# runic triangle on the floor.
+# You try to take the goblet, but your hand
+# passes through it as if it were illusory.
+#
+# You notice a glowing orb, labeled orb1, in one
+# corner of the triangle. The other points of the
+# triangle are labeled orb2 and orb3, but the orbs
+# have long since been stolen by tomb raiders.
+#
+# Perhaps adding more orbs would free the goblet's
+# material form.
+#
+# You remember a spell your magick teacher,
+# Caitlin the Green, taught you long ago:
+# a spell to copy and name objects...
+#
+
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/vault/stronghold
+$ cat orb1
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/vault/stronghold
+$ ./goblet
+You try to grasp the faintly glowing goblet, but it passes
+through your fingers.
+
+Are you stuck? Do you need a hint? y/n  y
+Try searching opensource.com for hints on how to copy files.
+
+Still stuck? Do you need the answer? y/n  y
+The cp command copies one file to another. Run these
+commands:
+
+cp orb1 orb2
+cp orb1 orb3
+
+And then run this goblet script again for confirmation.
+
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/vault/stronghold
+$ cp orb1 orb2
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/vault/stronghold
+$ cp orb1 orb3
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/vault/stronghold
+$ ./goblet
+You have freed the goblet's material form.  Add 'goblet' to
+your inventory.
+
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/vault/stronghold
+$ cd nursery
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/vault/stronghold/nursery
+$ ls -F
+lab/  scroll  spell*
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/vault/stronghold/nursery
+$ cat scroll
+
+# Once a thriving nursery filled with vibrant plants,
+# this is now the Nursery of the Still Dead (it says so,
+# in writing on the wall).
+
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/vault/stronghold/nursery
+$ ./spell
+A page from a druid's tome of incantations lies on the
+ground.  It reveals to you how to summon a healing potion:
+
+# To find a file on your system, use the find command.  For
+# example, to search this room:
+
+find . -name "potion"
+
+# Once you've found a potion, copy it to this directory and
+# run this spell script again.
+
+There are no potions in this room.  But try searching
+starting at the entrance.
+
+Hint: use pwd to determine how many rooms (folders) are
+between you and the entrance.
+
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/vault/stronghold/nursery
+$ -name "potion"
+bash: -name: command not found
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/vault/stronghold/nursery
+$ . -name "potion"
+bash: .: -n: invalid option
+.: usage: . filename [arguments]
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/vault/stronghold/nursery
+$ pwd
+/c/Users/Leon/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/vault/stronghold/nursery
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/vault/stronghold/nursery
+$ cd ....
+bash: cd: ....: No such file or directory
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/vault/stronghold/nursery
+$ cd ..
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/vault/stronghold
+$ find . -name "potion"
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/vault/stronghold
+$ cd nursery
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/vault/stronghold/nursery
+$ cd lab
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/vault/stronghold/nursery/lab
+$ ls -F
+ghost*  scroll
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance/vault/stronghold/nursery/lab
+$ ./ghost
+The room shakes, a gust of wind blasts you from nowhere.
+You sense that a presence has entered the room.  The pain
+you suddenly feel assures you that you are under attack by a
+ghostly entity!
+
+If you have a sword, you can attack.  Otherwise, you should
+run.
+
+Do you want to attack? y/n  y
+Enter a number:  1
+The monster rolled  32
+You rolled  23
+Your sword swings harmlessly through the air.  You take 5
+points damage. Deduct this from your HP variable:
+
+let HP=HP-5
+
+You suddenly feel cold, the life force draining from your
+body.  You have been slain by the ghost of an evil wizard.
+
+GAME OVER!
+
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance
+$ history -200 >> bashcrawl.log
+bash: history: -2: invalid option
+history: usage: history [-c] [-d offset] [n] or history -anrw [filename] or history -ps arg [arg...]
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance
+$ history -100 >> bashcrawl.log
+bash: history: -1: invalid option
+history: usage: history [-c] [-d offset] [n] or history -anrw [filename] or history -ps arg [arg...]
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance
+$ history > bashcrawl.log
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance
+$ ls -F
+bashcrawl.log  cellar/  chapel/  scrap  scroll  vault/
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance
+$ script bashcrawl.log
+bash: script: command not found
+
+Leon@DESKTOP-UI8N047 MINGW64 ~/Downloads/bashcrawl-stable-2024.02.09/bashcrawl-stable-2024.02.09/entrance
+$ history -200 >> bashcrawl.log
+bash: history: -2: invalid option
+history: usage: history [-c] [-d offset] [n] or history -anrw [filename] or history -ps arg [arg...]
